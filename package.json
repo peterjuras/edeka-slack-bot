@@ -1,8 +1,9 @@
 {
   "name": "edeka-slack-bot",
   "version": "0.0.1",
+  "main": "bot.js",
   "scripts": {
-    "start": "pm2 start bot.js"
+    "start": "node start bot.js"
   },
   "keywords": [
     "edeka",
@@ -14,7 +15,6 @@
     "botkit": "0.0.5",
     "htmlparser": "^1.7.7",
     "moment": "^2.11.2",
-    "pm2": "^1.0.0",
     "request": "^2.69.0",
     "soupselect": "^0.2.0"
   }
