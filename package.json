@@ -13,6 +13,7 @@
   "dependencies": {
     "botkit": "0.0.5",
     "htmlparser": "^1.7.7",
+    "moment": "^2.11.2",
     "request": "^2.69.0",
     "soupselect": "^0.2.0"
   }
