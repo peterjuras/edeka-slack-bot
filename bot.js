@@ -63,10 +63,6 @@ controller.hears('Edeka', 'direct_message,direct_mention,mention,ambient', (bot,
     return;
   }
 
-  if (text.match(/throw/g)) {
-    throw new Error('Expected');
-  }
-
   // Get menu for a day
   let day;
   if (text.indexOf('morgen') !== -1) {
