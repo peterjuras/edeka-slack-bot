@@ -1,0 +1,19 @@
+{
+  "name": "edeka-slack-bot",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "keywords": [
+    "edeka",
+    "slack"
+  ],
+  "author": "Peter Juras",
+  "license": "MIT",
+  "dependencies": {
+    "botkit": "0.0.5",
+    "htmlparser": "^1.7.7",
+    "request": "^2.69.0",
+    "soupselect": "^0.2.0"
+  }
+}
