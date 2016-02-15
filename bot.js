@@ -77,3 +77,16 @@ controller.hears('Edeka', 'direct_message,direct_mention,mention,ambient', (bot,
     bot.reply(message, reply);
   });
 });
+
+// Create dummy server to let openshift know that this app is running well
+const http = require('http');
+const server = http.createServer((request, response) => {
+  response.writeHead(200);
+  response.end();
+});
+
+server.listen(
+  process.env.OPENSHIFT_NODEJS_PORT ||
+  process.env.OPENSHIFT_INTERNAL_PORT || 8080,
+  process.env.OPENSHIFT_NODEJS_IP ||
+  process.env.OPENSHIFT_INTERNAL_IP);
