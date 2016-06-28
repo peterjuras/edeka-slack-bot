@@ -78,6 +78,10 @@ controller.hears('Edeka', 'direct_message,direct_mention,mention,ambient', (bot,
   });
 });
 
+controller.on('rtm_close', () => {
+  process.exit();
+});
+
 // Create dummy server to let openshift know that this app is running well
 const http = require('http');
 const server = http.createServer((request, response) => {
