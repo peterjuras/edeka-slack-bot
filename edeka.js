@@ -8,6 +8,7 @@ const select = require('soupselect').select;
 const menu_url = 'http://simmel.de/wochenmenue/';
 let currentCity = 'muenchen';
 
+const weekDateRegex = /\d\d[.]\d\d[.]\d\d\d\d/g;
 const dateRegex = /\d\d[.]\d\d[.]\d\d/g;
 const dateFormat = 'DD.MM.YYYY';
 
@@ -47,7 +48,7 @@ function parseDays(rawDays) {
 function parseWeek(rawWeek) {
   const week = {};
   const weekString = select(rawWeek, 'h4')[0].children[0].data;
-  const weekDates = weekString.match(dateRegex);
+  const weekDates = weekString.match(weekDateRegex);
   week.startDay = moment(weekDates[0], dateFormat);
   week.endDay = moment(weekDates[1], dateFormat);
 
