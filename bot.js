@@ -1,7 +1,9 @@
 'use strict';
 
 const Botkit = require('botkit');
-const controller = Botkit.slackbot();
+const controller = Botkit.slackbot({
+  stats_optout: true
+});
 const bot = controller.spawn({
   token: process.env.SLACK_BOT_TOKEN
 });

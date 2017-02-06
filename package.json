@@ -12,7 +12,7 @@
   "author": "Peter Juras",
   "license": "MIT",
   "dependencies": {
-    "botkit": "0.0.5",
+    "botkit": "0.4.10",
     "htmlparser": "^1.7.7",
     "moment": "^2.11.2",
     "request": "^2.69.0",
